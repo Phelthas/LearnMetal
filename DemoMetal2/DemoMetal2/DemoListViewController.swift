@@ -1,16 +1,17 @@
 //
-//  ViewController.swift
-//  DemoMetal1
+//  DemoListViewController.swift
+//  DemoMetal2
 //
-//  Created by billthaslu on 2024/1/12.
+//  Created by billthaslu on 2024/1/22.
 //
 
 import UIKit
-import Metal
+
+import UIKit
 
 let kCellReuseIdentifier = "UITableViewCell"
 
-class ViewController: UIViewController {
+class DemoListViewController: UIViewController {
 
     lazy var tableView: UITableView = {
         let tableView = UITableView(frame: self.view.bounds)
@@ -30,9 +31,7 @@ class ViewController: UIViewController {
         self.title = "DemoList"
         
         self.dataArray = [
-            One_1ViewController.self,
-            One_2ViewController.self,
-            One_3ViewController.self,
+            Two_1ViewController.self
         ]
         
     }
@@ -41,7 +40,7 @@ class ViewController: UIViewController {
 }
 
 // MARK: - UITableViewDataSource
-extension ViewController: UITableViewDataSource {
+extension DemoListViewController: UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return self.dataArray.count
@@ -58,7 +57,7 @@ extension ViewController: UITableViewDataSource {
 
 
 // MARK: - UITableViewDelegate
-extension ViewController: UITableViewDelegate {
+extension DemoListViewController: UITableViewDelegate {
     
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
         44
@@ -73,5 +72,4 @@ extension ViewController: UITableViewDelegate {
     }
     
 }
-
 
